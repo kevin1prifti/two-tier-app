@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-username/your-repo.git'
+                git branch: 'main', url: 'https://github.com/kevin1prifti/two-tier-app.git'
+                credentialsId: 'github-pat'
             }
         }
         stage('Build Docker Image') {
